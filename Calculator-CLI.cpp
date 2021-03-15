@@ -9,13 +9,12 @@ using namespace std;
 
 void FLT_NUMBER()
 {
-	double num=0, num2=0, adc=0;
-	float total=0;
+	float num=0, num2=0, adc=0, total=0;
 	char op_in, aux, aux2;
 	
 	do
 	{
-		cout << "  ________________________________________  " <<endl;
+		cout << "  ________________________________________  " << endl;
 		cout << " |                                        | " << endl;
 		cout << " |          *  CALCULATOR CLI  *          | " << endl;
 		cout << " |________________________________________| " << endl;
@@ -33,9 +32,25 @@ void FLT_NUMBER()
 		switch(op_in)
 		{
 		case '+':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			cout << "Please enter the first floating number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num==(int)num)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num==(int)num);
+			
+			cout << "Please enter the second floating number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2==(int)num2)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num2==(int)num2);
 			
 			total = num+num2;
 			
@@ -46,7 +61,7 @@ void FLT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
@@ -66,9 +81,25 @@ void FLT_NUMBER()
 			break;
 		
 		case '-':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			cout << "Please enter the first floating number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num==(int)num)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num==(int)num);
+			
+			cout << "Please enter the second floating number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2==(int)num2)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num2==(int)num2);
 			
 			total = num-num2;
 			
@@ -79,7 +110,7 @@ void FLT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
@@ -99,9 +130,25 @@ void FLT_NUMBER()
 			break;
 		
 		case '*':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			cout << "Please enter the first floating number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num==(int)num)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num==(int)num);
+			
+			cout << "Please enter the second floating number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2==(int)num2)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num2==(int)num2);
 			
 			total = num*num2;
 			
@@ -112,7 +159,7 @@ void FLT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
@@ -132,9 +179,25 @@ void FLT_NUMBER()
 			break;
 		
 		case '/':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			cout << "Please enter the first floating number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num==(int)num)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num==(int)num);
+			
+			cout << "Please enter the second floating number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2==(int)num2)
+					cout << "This number is not a float type. Please enter a valid number!" << endl;
+				
+			}while(num2==(int)num2);
 			
 			total = num/num2;
 			
@@ -145,7 +208,7 @@ void FLT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n');
@@ -153,7 +216,7 @@ void FLT_NUMBER()
 				if(aux2=='Y' || aux2=='y')
 				{
 					cin >> adc;
-					total = total*adc;
+					total = total/adc;
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
@@ -192,13 +255,12 @@ void FLT_NUMBER()
 
 void INT_NUMBER()
 {
-	double num=0, num2=0, adc=0;
-	float total=0;
+	float num=0, num2=0, adc=0, total=0;
 	char op_in, aux, aux2;
 	
 	do
 	{
-		cout << "  ________________________________________  " <<endl;
+		cout << "  ________________________________________  " << endl;
 		cout << " |                                        | " << endl;
 		cout << " |          *  CALCULATOR CLI  *          | " << endl;
 		cout << " |________________________________________| " << endl;
@@ -216,9 +278,25 @@ void INT_NUMBER()
 		switch(op_in)
 		{
 		case '+':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			cout << "Please enter the first integer number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num!=(int)num)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num!=(int)num);
+			
+			cout << "Please enter the second integer number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2!=(int)num2)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num2!=(int)num2);
 			
 			total = num+num2;
 			
@@ -229,7 +307,7 @@ void INT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
@@ -249,9 +327,23 @@ void INT_NUMBER()
 			break;
 		
 		case '-':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			do
+			{
+				cin >> num;
+				if(num!=(int)num)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num!=(int)num);
+			
+			cout << "Please enter the second integer number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2!=(int)num2)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num2!=(int)num2);
 			
 			total = num-num2;
 			
@@ -262,7 +354,7 @@ void INT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
@@ -282,9 +374,23 @@ void INT_NUMBER()
 			break;
 		
 		case '*':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			do
+			{
+				cin >> num;
+				if(num!=(int)num)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num!=(int)num);
+			
+			cout << "Please enter the second integer number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2!=(int)num2)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num2!=(int)num2);
 			
 			total = num*num2;
 			
@@ -295,7 +401,7 @@ void INT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
@@ -315,9 +421,23 @@ void INT_NUMBER()
 			break;
 		
 		case '/':
-			cout << "Please enter the numbers:" << endl;
-			cin >> num;
-			cin >> num2;
+			do
+			{
+				cin >> num;
+				if(num!=(int)num)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num!=(int)num);
+			
+			cout << "Please enter the second integer number:" << endl;
+			
+			do
+			{
+				cin >> num2;
+				if(num2!=(int)num2)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num2!=(int)num2);
 			
 			total = num/num2;
 			
@@ -328,7 +448,7 @@ void INT_NUMBER()
 					cout << "Add any more?" << endl;
 					cin >> aux2;
 					
-					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
 						cout << "Unknown command. Please enter a valid option! " << endl << endl;
 					
 				}while(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n');
@@ -336,7 +456,7 @@ void INT_NUMBER()
 				if(aux2=='Y' || aux2=='y')
 				{
 					cin >> adc;
-					total = total*adc;
+					total = total/adc;
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
@@ -386,7 +506,7 @@ void START()
 	
 	while(op1!=0)
 	{
-		cout << "  ________________________________________  " <<endl;
+		cout << "  ________________________________________  " << endl;
 		cout << " |                                        | " << endl;
 		cout << " |          *  CALCULATOR CLI  *          | " << endl;
 		cout << " |________________________________________| " << endl;
