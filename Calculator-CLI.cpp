@@ -9,12 +9,8 @@ using namespace std;
 
 void FLT_NUMBER()
 {
-	
-}
-
-void INT_NUMBER()
-{
-	int num=0, total=0;
+	double num=0, num2=0, adc=0;
+	float total=0;
 	char op_in, aux, aux2;
 	
 	do
@@ -38,24 +34,149 @@ void INT_NUMBER()
 		{
 		case '+':
 			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num+num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total+adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
 			break;
+		
 		case '-':
 			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num-num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total-adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
 			break;
+		
 		case '*':
 			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num*num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total*adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
 			break;
+		
 		case '/':
 			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num/num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total*adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
 			break;
+		
 		default:
+			
 			cout << "Unknown command. Please enter a valid option! " << endl << endl;
+			
+			system("pause");
+			system("cls");
+			
 			break;
 		}
 		
 		do
 		{
-			cout << "Do you want continue? Press Y or N" << endl;
+			cout << "Do you want continue? Y or N" << endl;
 			cin >> aux;
 			
 			if(aux!='y' && aux!='Y' && aux!='n' && aux!='N')
@@ -63,7 +184,193 @@ void INT_NUMBER()
 			
 		}while(aux!='y' && aux!='Y' && aux!='n' && aux!='N');
 		
-	} while(aux=='y' || aux=='Y');
+	}while(aux=='y' || aux=='Y');
+	
+	system("pause");
+	system("cls");
+}
+
+void INT_NUMBER()
+{
+	double num=0, num2=0, adc=0;
+	float total=0;
+	char op_in, aux, aux2;
+	
+	do
+	{
+		cout << "  ________________________________________  " <<endl;
+		cout << " |                                        | " << endl;
+		cout << " |          *  CALCULATOR CLI  *          | " << endl;
+		cout << " |________________________________________| " << endl;
+		cout << " |                                        | " << endl;
+		cout << " |        '+' - ADDITION                  | " << endl;
+		cout << " |        '-' - SUBSTRACTION              | " << endl;
+		cout << " |        '*' - MULTIPLICATION            | " << endl;
+		cout << " |        '/' - DIVISON                   | " << endl;
+		cout << " |________________________________________| " << endl;
+		cout << endl << endl;
+		
+		cout << "Please enter an operation which you like to calculate:" << endl;
+		cin >> op_in;
+		
+		switch(op_in)
+		{
+		case '+':
+			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num+num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total+adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case '-':
+			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num-num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total-adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case '*':
+			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num*num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2=='Y' && aux2=='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total*adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case '/':
+			cout << "Please enter the numbers:" << endl;
+			cin >> num;
+			cin >> num2;
+			
+			total = num/num2;
+			
+			do
+			{
+				do
+				{	
+					cout << "Add any more?" << endl;
+					cin >> aux2;
+					
+					if(aux2!='S' && aux2!='s' && aux2!='N' && aux2!='n')
+						cout << "Unknown command. Please enter a valid option! " << endl << endl;
+					
+				}while(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n');
+				
+				if(aux2=='Y' || aux2=='y')
+				{
+					cin >> adc;
+					total = total*adc;
+				}
+				
+			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		default:
+			
+			cout << "Unknown command. Please enter a valid option! " << endl << endl;
+			
+			system("pause");
+			system("cls");
+			
+			break;
+		}
+		
+		do
+		{
+			cout << "Do you want continue? Y or N" << endl;
+			cin >> aux;
+			
+			if(aux!='y' && aux!='Y' && aux!='n' && aux!='N')
+				cout << endl << "Please enter a valid option!" << endl;
+			
+		}while(aux!='y' && aux!='Y' && aux!='n' && aux!='N');
+		
+	}while(aux=='y' || aux=='Y');
+	
+	system("pause");
+	system("cls");
 	
 }
 
