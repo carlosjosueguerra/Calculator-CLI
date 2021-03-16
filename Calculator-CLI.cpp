@@ -9,6 +9,39 @@ using namespace std;
 
 void HELP()
 {
+	cout << "____________________________HELP____________________________" << endl << endl;
+	cout << "Commands: " << endl <<  endl;
+	cout << "'+' -> It allows the user to perform the addition operation " << endl;
+	cout << "between two or more numbers." << endl;
+	cout << "'-' -> It allows the user to perform the subtraction operation " << endl;
+	cout << "between two or more numbers." << endl;
+	cout << "'*' -> It allows the user to perform the multiplication operation " << endl;
+	cout << "between two or more numbers." << endl;
+	cout << "'/' -> It allows the user to perform the division operation " << endl;
+	cout << "between two or more numbers." << endl;
+	cout << "'V' -> It allows the user to perform the square root operation " << endl;
+	cout << "between two or more numbers." << endl << endl << endl;
+	
+	cout << "Functions: " << endl <<  endl;
+	cout << "FREE MODE -> It allows the user to perform arithmetic operations " << endl;
+	cout << "without any restriction on the numbers to which the equation is to be assigned." << endl;
+	cout << "INT NUMBER -> It allows the user to perform arithmetic operations " << endl;
+	cout << "using only integer numbers." << endl;
+	cout << "FLT NUMBER -> It allows the user to perform arithmetic operations " << endl;
+	cout << "using only floating numbers." << endl;
+	cout << "ODD NUMBER -> It allows the user to perform arithmetic operations " << endl;
+	cout << "using only odd numbers." << endl;
+	cout << "EVEN NUMBER -> It allows the user to perform arithmetic operations " << endl;
+	cout << "using only even numbers." << endl << endl << endl;
+	
+	cout << "Comments: " << endl << endl;
+	cout << "- To add a third number or more to each arithmetic operation, " << endl;
+	cout << "a verification message will appear, and must be answered with " << endl;
+	cout << "'Y' or 'y' for 'YES' or 'N' or 'n' for 'NO'. " << endl;
+	cout << "- In this version of the program, it's not possible to perform " << endl;
+	cout << "different arithmetic operations at once." << endl << endl;
+	
+	system("pause");
 	system("cls");
 }
 
@@ -28,6 +61,7 @@ void FREE_MODE()
 		cout << " |        '-' - SUBSTRACTION              | " << endl;
 		cout << " |        '*' - MULTIPLICATION            | " << endl;
 		cout << " |        '/' - DIVISON                   | " << endl;
+		cout << " |        'V' - SQUARE ROOT               | " << endl;
 		cout << " |________________________________________| " << endl;
 		cout << endl << endl;
 		
@@ -49,7 +83,7 @@ void FREE_MODE()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -84,7 +118,7 @@ void FREE_MODE()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -119,7 +153,7 @@ void FREE_MODE()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -154,7 +188,7 @@ void FREE_MODE()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -169,6 +203,19 @@ void FREE_MODE()
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case 'V':
+			cout << "Please enter the number:" << endl;
+			
+			cin >> num;
+			
+			total = sqrt(num);
 			
 			cout << "Result: " << total << endl;
 			system("pause");
@@ -218,6 +265,7 @@ void ODD_NUMBER()
 		cout << " |        '-' - SUBSTRACTION              | " << endl;
 		cout << " |        '*' - MULTIPLICATION            | " << endl;
 		cout << " |        '/' - DIVISON                   | " << endl;
+		cout << " |        'V' - SQUARE ROOT               | " << endl;
 		cout << " |________________________________________| " << endl;
 		cout << endl << endl;
 		
@@ -232,20 +280,20 @@ void ODD_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 == 0 || num!=(int)num)
+				if((int)num % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 == 0 || num!=(int)num);
+			}while((int)num % 2 == 0);
 			
 			cout << "Please enter the second odd number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 == 0 || num2!=(int)num2)
+				if((int)num2 % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 == 0 || num2!=(int)num2);
+			}while((int)num2 % 2 == 0);
 			
 			total = num+num2;
 			
@@ -253,7 +301,7 @@ void ODD_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -266,10 +314,10 @@ void ODD_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 == 0 || adc!=(int)adc)
+						if((int)adc % 2 == 0)
 							cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 == 0 || adc!=(int)adc);
+					}while((int)adc % 2 == 0);
 					
 					total = total+adc;
 				}
@@ -288,20 +336,20 @@ void ODD_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 == 0 || num!=(int)num)
+				if((int)num % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 == 0 || num!=(int)num);
+			}while((int)num % 2 == 0);
 			
 			cout << "Please enter the second odd number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 == 0 || num2!=(int)num2)
+				if((int)num2 % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 == 0 || num2!=(int)num2);
+			}while((int)num2 % 2 == 0);
 			
 			total = num-num2;
 			
@@ -309,7 +357,7 @@ void ODD_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -322,10 +370,10 @@ void ODD_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 == 0 || adc!=(int)adc)
+						if((int)adc % 2 == 0)
 							cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 == 0 || adc!=(int)adc);
+					}while((int)adc % 2 == 0);
 					
 					total = total-adc;
 				}
@@ -344,20 +392,20 @@ void ODD_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 == 0 || num!=(int)num)
+				if((int)num % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 == 0 || num!=(int)num);
+			}while((int)num % 2 == 0);
 			
 			cout << "Please enter the second odd number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 == 0 || num2!=(int)num2)
+				if((int)num2 % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 == 0 || num2!=(int)num2);
+			}while((int)num2 % 2 == 0);
 			
 			total = num*num2;
 			
@@ -365,7 +413,7 @@ void ODD_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -378,10 +426,10 @@ void ODD_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 == 0 || adc!=(int)adc)
+						if((int)adc % 2 == 0)
 							cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 == 0 || adc!=(int)adc);
+					}while((int)adc % 2 == 0);
 					
 					total = total*adc;
 				}
@@ -400,20 +448,20 @@ void ODD_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 == 0 || num!=(int)num)
+				if((int)num % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 == 0 || num!=(int)num);
+			}while((int)num % 2 == 0);
 			
 			cout << "Please enter the second odd number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 == 0 || num2!=(int)num2)
+				if((int)num2 % 2 == 0)
 					cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 == 0 || num2!=(int)num2);
+			}while((int)num2 % 2 == 0);
 			
 			total = num/num2;
 			
@@ -421,7 +469,7 @@ void ODD_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -434,15 +482,34 @@ void ODD_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 == 0 || adc!=(int)adc)
+						if((int)adc % 2 == 0)
 							cout << "This number is not odd. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 == 0 || adc!=(int)adc);
+					}while((int)adc % 2 == 0);
 					
 					total = total/adc;
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case 'V':
+			cout << "Please enter the odd number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if((int)num % 2 == 0)
+					cout << "This number is not a odd type. Please enter a valid number!" << endl;
+				
+			}while((int)num % 2 == 0);
+			
+			total = sqrt(num);
 			
 			cout << "Result: " << total << endl;
 			system("pause");
@@ -492,6 +559,7 @@ void EVEN_NUMBER()
 		cout << " |        '-' - SUBSTRACTION              | " << endl;
 		cout << " |        '*' - MULTIPLICATION            | " << endl;
 		cout << " |        '/' - DIVISON                   | " << endl;
+		cout << " |        'V' - SQUARE ROOT               | " << endl;
 		cout << " |________________________________________| " << endl;
 		cout << endl << endl;
 		
@@ -506,20 +574,20 @@ void EVEN_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 != 0 || num!=(int)num)
+				if((int)num % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 != 0 || num!=(int)num);
+			}while((int)num % 2 != 0);
 			
 			cout << "Please enter the second even number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 != 0 || num2!=(int)num2)
+				if((int)num2 % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 != 0 || num2!=(int)num2);
+			}while((int)num2 % 2 != 0);
 			
 			total = num+num2;
 			
@@ -527,7 +595,7 @@ void EVEN_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -540,10 +608,10 @@ void EVEN_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 != 0 || adc!=(int)adc)
+						if((int)adc % 2 != 0)
 							cout << "This number is not even. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 != 0 || adc!=(int)adc);
+					}while((int)adc % 2 != 0);
 					
 					total = total+adc;
 				}
@@ -562,20 +630,20 @@ void EVEN_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 != 0 || num!=(int)num)
+				if((int)num % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 != 0 || num!=(int)num);
+			}while((int)num % 2 != 0);
 			
 			cout << "Please enter the second even number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 != 0 || num2!=(int)num2)
+				if((int)num2 % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 != 0 || num2!=(int)num2);
+			}while((int)num2 % 2 != 0);
 			
 			total = num-num2;
 			
@@ -583,7 +651,7 @@ void EVEN_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -596,10 +664,10 @@ void EVEN_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 != 0 || adc!=(int)adc)
+						if((int)adc % 2 != 0)
 							cout << "This number is not even. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 != 0 || adc!=(int)adc);
+					}while((int)adc % 2 != 0);
 					
 					total = total-adc;
 				}
@@ -618,20 +686,20 @@ void EVEN_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 != 0 || num!=(int)num)
+				if((int)num % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 != 0 || num!=(int)num);
+			}while((int)num % 2 != 0);
 			
 			cout << "Please enter the second even number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 != 0 || num2!=(int)num2)
+				if((int)num2 % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 != 0 || num2!=(int)num2);
+			}while((int)num2 % 2 != 0);
 			
 			total = num*num2;
 			
@@ -639,7 +707,7 @@ void EVEN_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -652,10 +720,10 @@ void EVEN_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 != 0 || adc!=(int)adc)
+						if((int)adc % 2 != 0)
 							cout << "This number is not even. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 != 0 || adc!=(int)adc);
+					}while((int)adc % 2 != 0);
 					
 					total = total*adc;
 				}
@@ -674,20 +742,20 @@ void EVEN_NUMBER()
 			do
 			{
 				cin >> num;
-				if((int)num % 2 != 0 || num!=(int)num)
+				if((int)num % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num % 2 != 0 || num!=(int)num);
+			}while((int)num % 2 != 0);
 			
 			cout << "Please enter the second even number:" << endl;
 			
 			do
 			{
 				cin >> num2;
-				if((int)num2 % 2 != 0 || num2!=(int)num2)
+				if((int)num2 % 2 != 0)
 					cout << "This number is not even. Please enter a valid number!" << endl;
 				
-			}while((int)num2 % 2 != 0 || num2!=(int)num2);
+			}while((int)num2 % 2 != 0);
 			
 			total = num/num2;
 			
@@ -695,7 +763,7 @@ void EVEN_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -708,15 +776,34 @@ void EVEN_NUMBER()
 					do
 					{
 						cin >> adc;
-						if((int)adc % 2 != 0 || adc!=(int)adc)
+						if((int)adc % 2 != 0)
 							cout << "This number is not even. Please enter a valid number!" << endl;
 				
-					}while((int)adc % 2 != 0 || adc!=(int)adc);
+					}while((int)adc % 2 != 0);
 					
 					total = total/adc;
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case 'V':
+			cout << "Please enter the even number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if((int)num % 2 != 0)
+					cout << "This number is not a even type. Please enter a valid number!" << endl;
+				
+			}while((int)num % 2 != 0);
+			
+			total = sqrt(num);
 			
 			cout << "Result: " << total << endl;
 			system("pause");
@@ -766,6 +853,7 @@ void FLT_NUMBER()
 		cout << " |        '-' - SUBSTRACTION              | " << endl;
 		cout << " |        '*' - MULTIPLICATION            | " << endl;
 		cout << " |        '/' - DIVISON                   | " << endl;
+		cout << " |        'V' - SQUARE ROOT               | " << endl;
 		cout << " |________________________________________| " << endl;
 		cout << endl << endl;
 		
@@ -801,7 +889,7 @@ void FLT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -857,7 +945,7 @@ void FLT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -913,7 +1001,7 @@ void FLT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -969,7 +1057,7 @@ void FLT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -991,6 +1079,25 @@ void FLT_NUMBER()
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case 'V':
+			cout << "Please enter the floating number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num==(int)num)
+					cout << "This number is not a floating type. Please enter a valid number!" << endl;
+				
+			}while(num==(int)num);
+			
+			total = sqrt(num);
 			
 			cout << "Result: " << total << endl;
 			system("pause");
@@ -1040,6 +1147,7 @@ void INT_NUMBER()
 		cout << " |        '-' - SUBSTRACTION              | " << endl;
 		cout << " |        '*' - MULTIPLICATION            | " << endl;
 		cout << " |        '/' - DIVISON                   | " << endl;
+		cout << " |        'V' - SQUARE ROOT               | " << endl;
 		cout << " |________________________________________| " << endl;
 		cout << endl << endl;
 		
@@ -1075,7 +1183,7 @@ void INT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -1131,7 +1239,7 @@ void INT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -1187,7 +1295,7 @@ void INT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -1243,7 +1351,7 @@ void INT_NUMBER()
 			{
 				do
 				{	
-					cout << "Add any more?" << endl;
+					cout << "Add any more? Y or N" << endl;
 					cin >> aux2;
 					
 					if(aux2!='Y' && aux2!='y' && aux2!='N' && aux2!='n')
@@ -1265,6 +1373,25 @@ void INT_NUMBER()
 				}
 				
 			}while(aux2=='Y' || aux2=='y');
+			
+			cout << "Result: " << total << endl;
+			system("pause");
+			system("cls");
+			
+			break;
+		
+		case 'V':
+			cout << "Please enter the integer number:" << endl;
+			
+			do
+			{
+				cin >> num;
+				if(num!=(int)num)
+					cout << "This number is not a integer type. Please enter a valid number!" << endl;
+				
+			}while(num!=(int)num);
+			
+			total = sqrt(num);
 			
 			cout << "Result: " << total << endl;
 			system("pause");
@@ -1327,7 +1454,7 @@ void START()
 			if(op1!=0 && op1!=1 && op1!=2 && op1!=3)
 				cout<< endl << "Please enter a valid option!" << endl;
 			
-		}while(op1!=0 && op1!=1 && op1!=2 && op1!=3);
+		}while(op1!=0 && op1!=1 && op1!=2 && op1!=3 && op1!=4 && op1!=5 && op1!=6);
 		
 		system("cls");
 		
